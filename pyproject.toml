@@ -1,0 +1,22 @@
+[project]
+name = "edge-cam"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "VitaliyPolovyy",email = "polovyy.vitaliy@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi (>=0.115.11,<0.116.0)",
+    "uvicorn[standard] (>=0.34.0,<0.35.0)",
+    "python-multipart (>=0.0.20,<0.0.21)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "picamera2 (>=0.3.25,<0.4.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
