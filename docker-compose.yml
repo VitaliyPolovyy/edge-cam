@@ -1,0 +1,15 @@
+services:
+  edge-cam:
+    build: .
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./data:/app/data
+      - /dev:/dev
+      - /sys:/sys
+      - /var/run:/var/run
+    environment:
+      - PYTHONPATH=/usr/lib/python3/dist-packages:/usr/local/lib/python3/site-packages
+      - LOG_LEVEL=info
+      - UDEV=1
+    restart: unless-stopped
